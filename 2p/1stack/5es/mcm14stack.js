@@ -3,7 +3,7 @@
 // from the book mcm14
 //
 
-function Stack() {
+export function Stack() {
     this.dataStore = []
     this.top = 0
     this.push = push

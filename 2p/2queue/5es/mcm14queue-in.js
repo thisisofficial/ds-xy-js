@@ -3,7 +3,7 @@
 // to complete
 //
 
-function Queue() {
+export function Queue() {
     this.dataStore = []
 
     this.enqueue= function(element) {
@@ -38,13 +38,17 @@ function Queue() {
 	
     }
 
+    this.clear= function(){
+        this.dataStore = []
+    }
+
     this.full= function() {}
 }
 
 
 //
 // test program
-//
+/*
 let q = new Queue()
 q.enqueue("Meredith")
 q.enqueue("Cynthia")
@@ -57,4 +61,4 @@ console.log("Back of queue: " + q.back())
 
 q.dequeue()
 console.log(q.toString())
-console.log('done')
+console.log('done')*/

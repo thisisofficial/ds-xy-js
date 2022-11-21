@@ -47,9 +47,6 @@ function insertAfter(after,newNode){
 
 function insertBefore(before, newNode){
     let cur = this.head;
-    do while(){
-        
-    }
 }
 
 //
