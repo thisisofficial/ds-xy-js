@@ -2,7 +2,7 @@
 // 
 //
 
-function preorder(n){
+export function preorder(n){
   if (n){//exists
     console.log(n.d)
 
