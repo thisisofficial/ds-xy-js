@@ -22,6 +22,10 @@ function treeNode(n){
     this.isLeaf = isLeaf;
     this.isRoot = isLeaf;
     this.hasChildren = hasChildren;
+    this.deleteConnection = deleteConnection;
+    this.deleteLeft = deleteLeft;
+    this.deleteRigth = deleteRigth;
+    this.deleteParent = deleteParent;
     this.export = exportTree;
 }
 
@@ -113,6 +117,46 @@ function hasChildren(){
     return !this.isLeaf;
 }
 
+function deleteConnection(x,y){
+    if(x.parent == y){
+        x.parent = null;
+        if(y.left == x){
+            y.left = null;
+        }
+        else{
+            y.rigth = null;
+        }
+    }
+    else if(y.parent == x){
+        y.parent = null;
+        if(x.left == y){
+            x.left = null;
+        }
+        else{
+            x.rigth = null;
+        }
+    }
+}
+
+function deleteParent(){
+        if(this.parent.left == this){
+            this.parent.left = null;
+        }
+        else{
+            this.parent.rigth = null;
+        }
+        this.parent = null;
+}
+
+function deleteLeft(x){
+    this.left.parent = null
+    this.left = null;
+}
+
+function deleteRigth(x){
+    this.rigth.parent = null
+    this.rigth = null
+}
 
 /* =============|Demo example|=============
                     [root]
